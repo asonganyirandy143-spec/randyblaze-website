@@ -2,30 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects | Randy Blaze</title>
+  <title>Projects | RandyBlaze</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
+
 <body>
 
+<!-- Dark Mode Toggle -->
+<button id="darkToggle" class="dark-toggle">🌙 Dark Mode</button>
+
+<header>
+  <h1>🚀 My Projects</h1>
+  <p>Cool things I’m building and learning</p>
+</header>
+
 <nav>
-  <h1>Randy Blaze</h1>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><button onclick="toggleDark()">🌙</button></li>
-  </ul>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<section>
-  <h2>My Projects 🚀</h2>
-  <p>Here are some projects I’ve worked on.</p>
+<main class="projects">
 
-  <img src="images/project1.jpg" width="100%">
-  <img src="images/project2.jpg" width="100%">
-</section>
+  <div class="project-card">
+    <h2>🔥 RandyBlaze Dev Hub</h2>
+    <p>
+      A personal developer platform built using HTML, CSS, and JavaScript.
+      Developed fully on a mobile phone using Termux and hosted on GitHub Pages.
+    </p>
+
+    <ul>
+      <li>✔ Multi-page website</li>
+      <li>✔ Dark mode support</li>
+      <li>✔ Mobile-first design</li>
+      <li>✔ GitHub Pages deployment</li>
+    </ul>
+
+    <a href="https://asonganyirandy143-spec.github.io/randyblaze-website/" target="_blank">
+      🔗 View Live Project
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 RandyBlaze</p>
+</footer>
+
+<!-- Dark Mode Script -->
+<script>
+  const toggle = document.getElementById("darkToggle");
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      toggle.textContent = "☀️ Light Mode";
+    } else {
+      toggle.textContent = "🌙 Dark Mode";
+    }
+  });
+</script>
 
 </body>
 </html>
