@@ -2,71 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects | RandyBlaze</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Randy Blaze</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<button id="darkToggle" class="dark-toggle">🌙 Dark Mode</button>
+  <button class="dark-toggle" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
 
-<header>
-  <h1>🚀 My Projects</h1>
-  <p>Cool things I’m building and learning</p>
-</header>
+  <header>
+    <h1>My Projects</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <main class="projects">
 
-<main class="projects">
-
-  <div class="project-card">
-    <h2>🤖 WhatsApp Chat Bot</h2>
-    <p>A bot to automate WhatsApp messages using Node.js and Baileys.</p>
-    <pre><code>
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h2>WhatsApp Chat Bot</h2>
+      <p>Learn how to create a WhatsApp bot using Node.js and Baileys.</p>
+      <pre>
+<code>
 const { default: makeWASocket } = require('@whiskeysockets/baileys');
 const sock = makeWASocket();
 sock.ev.on('messages.upsert', async m => {
-  console.log(JSON.stringify(m, undefined, 2))
+  console.log(m);
 });
-    </code></pre>
-  </div>
+</code>
+      </pre>
+    </div>
 
-  <div class="project-card">
-    <h2>💻 Personal Website</h2>
-    <p>A portfolio website built using HTML, CSS, and JS.</p>
-    <pre><code>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Welcome to my portfolio</h1>
-  </body>
-</html>
-    </code></pre>
-    <a href="https://asonganyirandy143-spec.github.io/randyblaze-website/" target="_blank">🔗 View Live</a>
-  </div>
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h2>Personal Website</h2>
+      <p>Create a responsive personal website with HTML, CSS, and GitHub Pages.</p>
+      <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+      </pre>
+    </div>
 
-</main>
+  </main>
 
-<footer>
-  <p>© 2025 RandyBlaze</p>
-</footer>
-
-<script>
-const toggle = document.getElementById("darkToggle");
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  toggle.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
-});
-</script>
+  <footer>
+    &copy; 2025 Randy Blaze
+  </footer>
 
 </body>
 </html>
