@@ -2,32 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact | Randy Blaze</title>
+  <title>Contact | RandyBlaze</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
+
 <body>
+<button id="darkToggle" class="dark-toggle">🌙 Dark Mode</button>
+
+<header>
+  <h1>📬 Contact Me</h1>
+  <p>Let’s connect! I love collaborating, sharing ideas, and building cool projects.</p>
+</header>
 
 <nav>
-  <h1>Randy Blaze</h1>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><button onclick="toggleDark()">🌙</button></li>
-  </ul>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<section>
-  <h2>Contact Me 📧</h2>
-  <p>Email me at:</p>
-  <p>
-    <a href="mailto:asonganyirandy@gmail.com">
-      asonganyirandy@gmail.com
-    </a>
-  </p>
-</section>
+<main>
+
+  <section>
+    <h2>🔥 A Little About Me</h2>
+    <p>
+      I’m RandyBlaze — a young developer on a mission to create, learn, and inspire.  
+      If you’re curious, motivated, or just want to say hi, I’d love to hear from you!
+    </p>
+  </section>
+
+  <section>
+    <h2>📧 Get In Touch</h2>
+    <p>
+      Email me at: 
+      <a href="mailto:asonganyirandy@gmail.com">asonganyirandy@gmail.com</a>
+    </p>
+    <p>
+      I respond to messages as fast as I can — let’s make something awesome together!
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 RandyBlaze</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById("darkToggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    toggle.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+  });
+</script>
 
 </body>
 </html>

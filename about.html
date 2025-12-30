@@ -2,30 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About | Randy Blaze</title>
+  <title>About | RandyBlaze</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
+
 <body>
+<button id="darkToggle" class="dark-toggle">🌙 Dark Mode</button>
+
+<header>
+  <h1>👋 About Me</h1>
+  <p>Learn more about RandyBlaze and my journey as a developer</p>
+</header>
 
 <nav>
-  <h1>Randy Blaze</h1>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><button onclick="toggleDark()">🌙</button></li>
-  </ul>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<section>
-  <h2>About Me 👋</h2>
-  <p>
-    I’m Randy Blaze, a passionate young developer learning web and software
-    development. I enjoy building websites and learning new technologies.
-  </p>
-</section>
+<main>
+  <section>
+    <h2>🧑‍💻 Who I Am</h2>
+    <p>
+      Hi! I'm RandyBlaze, a young developer passionate about coding, creating websites, bots, and learning new technologies. 
+      I primarily use Termux and GitHub to build projects directly from my mobile device.
+    </p>
+  </section>
+
+  <section>
+    <h2>🚀 What I Know</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Node.js and creating bots (e.g., WhatsApp bots)</li>
+      <li>Using Git and GitHub for version control</li>
+      <li>Termux and mobile development tools</li>
+      <li>Building and deploying websites on GitHub Pages</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 My Goals</h2>
+    <p>
+      I aim to become a skilled full-stack developer, create useful projects, and share knowledge with others who are starting their coding journey.
+    </p>
+  </section>
+
+  <section>
+    <h2>📌 Fun Fact</h2>
+    <p>
+      I can code entire projects using just my phone and Termux. Learning never stops, and I love experimenting with new ideas.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 RandyBlaze</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById("darkToggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    toggle.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+  });
+</script>
 
 </body>
 </html>

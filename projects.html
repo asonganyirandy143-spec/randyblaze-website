@@ -8,8 +8,6 @@
 </head>
 
 <body>
-
-<!-- Dark Mode Toggle -->
 <button id="darkToggle" class="dark-toggle">🌙 Dark Mode</button>
 
 <header>
@@ -27,22 +25,35 @@
 <main class="projects">
 
   <div class="project-card">
-    <h2>🔥 RandyBlaze Dev Hub</h2>
-    <p>
-      A personal developer platform built using HTML, CSS, and JavaScript.
-      Developed fully on a mobile phone using Termux and hosted on GitHub Pages.
-    </p>
+    <h2>🤖 WhatsApp Chat Bot</h2>
+    <p>A bot to automate WhatsApp messages using Node.js and Baileys library.</p>
+    <pre><code>
+const { default: makeWASocket } = require('@whiskeysockets/baileys');
 
-    <ul>
-      <li>✔ Multi-page website</li>
-      <li>✔ Dark mode support</li>
-      <li>✔ Mobile-first design</li>
-      <li>✔ GitHub Pages deployment</li>
-    </ul>
+const sock = makeWASocket();
+sock.ev.on('messages.upsert', async m => {
+  console.log(JSON.stringify(m, undefined, 2))
+});
+    </code></pre>
+    <a href="#" target="_blank">🔗 Learn More</a>
+  </div>
 
-    <a href="https://asonganyirandy143-spec.github.io/randyblaze-website/" target="_blank">
-      🔗 View Live Project
-    </a>
+  <div class="project-card">
+    <h2>💻 Personal Website</h2>
+    <p>A multi-page portfolio website built using HTML, CSS, and JavaScript.</p>
+    <pre><code>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Welcome to my portfolio</h1>
+  </body>
+</html>
+    </code></pre>
+    <a href="https://asonganyirandy-spec.github.io/randyblaze-website/" target="_blank">🔗 View Live</a>
   </div>
 
 </main>
@@ -51,18 +62,11 @@
   <p>© 2025 RandyBlaze</p>
 </footer>
 
-<!-- Dark Mode Script -->
 <script>
   const toggle = document.getElementById("darkToggle");
-
   toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-      toggle.textContent = "☀️ Light Mode";
-    } else {
-      toggle.textContent = "🌙 Dark Mode";
-    }
+    toggle.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
   });
 </script>
 
