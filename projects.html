@@ -1,65 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Randy Blaze</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Randy Blaze</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button class="dark-toggle" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
+<header>
+  <nav>
+    <div class="logo">Randy Blaze</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <header>
-    <h1>My Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="projects">
-
-    <!-- Project 1 -->
-    <div class="project-card">
-      <h2>WhatsApp Chat Bot</h2>
-      <p>Learn how to create a WhatsApp bot using Node.js and Baileys.</p>
-      <pre>
-<code>
-const { default: makeWASocket } = require('@whiskeysockets/baileys');
-const sock = makeWASocket();
-sock.ev.on('messages.upsert', async m => {
-  console.log(m);
-});
-</code>
-      </pre>
+<section class="projects-page">
+  <h2>My Projects</h2>
+  <div class="project-cards">
+    <div class="card">
+      <div class="card-image">
+        <img src="images/project1.jpg" alt="Project One">
+        <a href="#" class="btn-small">View Project</a>
+      </div>
+      <h3>Project One</h3>
+      <p>Short description of project one.</p>
     </div>
-
-    <!-- Project 2 -->
-    <div class="project-card">
-      <h2>Personal Website</h2>
-      <p>Create a responsive personal website with HTML, CSS, and GitHub Pages.</p>
-      <pre>
-<code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My Website&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Welcome!&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code>
-      </pre>
+    <div class="card">
+      <div class="card-image">
+        <img src="images/project2.jpg" alt="Project Two">
+        <a href="#" class="btn-small">View Project</a>
+      </div>
+      <h3>Project Two</h3>
+      <p>Short description of project two.</p>
     </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="images/project3.jpg" alt="Project Three">
+        <a href="#" class="btn-small">View Project</a>
+      </div>
+      <h3>Project Three</h3>
+      <p>Short description of project three.</p>
+    </div>
+  </div>
+</section>
 
-  </main>
-
-  <footer>
-    &copy; 2025 Randy Blaze
-  </footer>
-
+<footer>
+  <p>&copy; 2026 Randy Blaze. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

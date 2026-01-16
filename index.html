@@ -1,61 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>RandyBlaze | Developer Notes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randy Blaze</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-
 <body>
-<button id="darkToggle" class="dark-toggle">🌙 Dark Mode</button>
-
 <header>
-  <h1>Welcome 👋</h1>
-  <p>Notes, lessons, and motivation for learning how to code</p>
+  <nav>
+    <div class="logo">Randy Blaze</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Hello, I’m <span id="typed"></span></h1>
+    <p class="subtitle">Web Developer & Designer</p>
+    <a href="projects.html" class="btn">View My Work</a>
+  </div>
+</section>
 
-<main>
-  <section>
-    <h2>🧠 What Is Coding?</h2>
-    <p>Coding is telling a computer what to do using programming languages. Build websites, bots, apps, and games!</p>
-  </section>
-
-  <section>
-    <h2>🚀 How To Become a Developer</h2>
-    <ol>
-      <li>Start with HTML, CSS, JS</li>
-      <li>Practice daily</li>
-      <li>Build projects</li>
-      <li>Learn Git & GitHub</li>
-      <li>Be patient and persistent</li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>🔥 My Advice</h2>
-    <p>You can code using only your phone and Termux. Consistency beats perfection.</p>
-  </section>
-</main>
+<section class="features">
+  <div class="feature-card">
+    <i class="fas fa-code"></i>
+    <h3>Web Development</h3>
+    <p>Modern, responsive websites built professionally.</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-paint-brush"></i>
+    <h3>Design</h3>
+    <p>Clean and modern UI/UX designs for all devices.</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-rocket"></i>
+    <h3>Projects</h3>
+    <p>High-quality projects to showcase my skills.</p>
+  </div>
+</section>
 
 <footer>
-  <p>© 2025 RandyBlaze</p>
+  <p>&copy; 2026 Randy Blaze. All Rights Reserved.</p>
 </footer>
-
-<script>
-const toggle = document.getElementById("darkToggle");
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  toggle.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
